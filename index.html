@@ -22,7 +22,7 @@
     
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead font-weight-bold">Welcome! Today is <span id="todaysDate">Thursday, January 30 2020</span>.</p>
+      <p class="lead font-weight-bold">Welcome! Today is <span id="todaysDate"></span></p>
       <p id="currentDay" class="lead"></p>
     </header>
     
@@ -33,9 +33,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">09:00 am</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="9am"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="9"><i class="far fa-save"></i></button>
         </div>
       </div>
       <!-- Timeblock -->
@@ -43,9 +43,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">10:00 am</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="10am"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="10"><i class="far fa-save"></i></button>
         </div>
       </div>
       <!-- Timeblock -->
@@ -53,9 +53,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">11:00 am</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="11am"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="11"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -64,9 +64,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">12:00 pm</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="12pm"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="12"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -75,9 +75,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">01:00 pm</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="1pm"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="1"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -86,9 +86,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">02:00 pm</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="2pm"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="2"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -97,9 +97,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">03:00 pm</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="3pm"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="3"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -108,9 +108,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">04:00 pm</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="4pm"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="4"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -119,9 +119,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text">05:00 pm</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <textarea class="form-control" aria-label="With textarea" id="5pm"></textarea>
         <div class="input-group-append">
-          <button class="input-group-text saveTask"><i class="far fa-save"></i></button>
+          <button class="input-group-text" index="5"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -132,5 +132,6 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/script.js"></script>
   </body>
 </html>
