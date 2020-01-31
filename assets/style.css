@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1;
-  background: url('https://images.unsplash.com/photo-1422289304860-97fce8cf2066?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2500&q=80') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1535955565956-4a631184a821?ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -22,40 +22,45 @@ textarea {
 .jumbotron {
   text-align: center;
   border-radius: 0;
-  background: rgb(201,223,242);
-  background: linear-gradient(180deg, rgba(201,223,242,1) 0%, rgba(240,248,251,1) 100%);
+  background: rgb(210,226,248);
+  background: linear-gradient(0deg, rgba(210,226,248,1) 4%, rgba(135,191,235,0) 100%);
 }
 
 .jumbotron h1 {
-  color: #182526;
+  color: #488abe;
 }
 
-.lead, h4 {
-  color: #468BA6;
+.lead {
+  color: #536195;
 }
 
 .past {
-  background-color: #969696;
-  color: white;
+  background-color: #d4e4fd;
+  color: #536195;
 }
 
 .present {
-  background-color: #f3bab7;
-  color: #6c757d;
+  background-color: #ddcae3;
+  color: #536195;
 }
 
 .future {
-  background-color: #C9DFF2;
-  color: #6c757d;
+  background-color: #e6def5;
+  color: #536195;
 }
 
 .input-group-text {
-  background-color: #C9DFF2;
-  border: 1px solid #fff;
+  background-color: #c6d9f6;
+  border: 1px solid #a1b7e4;
+  color: #536195;
 }
 
 .form-control { 
-  border: 1px solid #DCECF2;
+  border: 1px solid #a1b7e4;
+}
+
+.quote {
+  color: #C9DFF2;
 }
 
 
