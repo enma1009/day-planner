@@ -3,7 +3,6 @@ $(document).ready(function() {
     var now = moment(); // gets the current date and time
     var formattedDate = now.format("dddd[,] MMMM Do gggg"); // formats the current date and time
     var currentHour = now.format("HH"); // gets the hour in 24 hour time
-    var timeSlots = ["09","10","11","12","13","14","15","16","17"];
 
     $("#todaysDate").text(formattedDate);
     
@@ -40,9 +39,12 @@ $(document).ready(function() {
     };
    });
 
-   getFromLocalStorage(timeSlots); // checks for values in local storage and displays them on the page
-
   });
+
+$(window).on("load", function() {
+    var timeSlots = ["09","10","11","12","13","14","15","16","17"];
+    getFromLocalStorage(timeSlots); // checks for values in local storage and displays them on the page
+});
 
 function saveToLocalStorage(cts,cta) {
     if (cta !== '') {
@@ -52,10 +54,11 @@ function saveToLocalStorage(cts,cta) {
 
 function getFromLocalStorage(t) {
     if (localStorage) {
-        for (var i = 0; i <= localStorage.length; i++) {
+        console.log(localStorage.length);
+        for (var i = 0; i < t.length; i++) {
             var taskKey = t[i];
             var task = localStorage.getItem(taskKey);
-            if (task !== null) {
+            if (task) {
                 $("#"+taskKey).val(task);
             }
         };
