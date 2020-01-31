@@ -22,7 +22,6 @@ $(document).ready(function() {
     // disables the button for past hours
     $("button").each(function( i ) {
         var currentBtn = $(this).attr("index"); 
-        //console.log(timeSlot);
         if(currentHour > currentBtn) {       
             $(this).prop('disabled', true);
         };
@@ -34,7 +33,6 @@ $(document).ready(function() {
     var currentTextarea = $("#"+currentTimeSlot).val();
 
     if (!currentTextarea) {
-        alert("nothing here!");
         $(this).find("i").attr("class", "far fa-save");
     } else {
         $(this).find("i").attr("class", "fas fa-save");
