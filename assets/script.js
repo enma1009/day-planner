@@ -33,7 +33,13 @@ $(document).ready(function() {
     var currentTimeSlot = $(this).attr("index");
     var currentTextarea = $("#"+currentTimeSlot).val();
 
-    saveToLocalStorage(currentTimeSlot,currentTextarea); // saves to the storage if the user presses the save button
+    if (!currentTextarea) {
+        alert("nothing here!");
+        $(this).find("i").attr("class", "far fa-save");
+    } else {
+        $(this).find("i").attr("class", "fas fa-save");
+        saveToLocalStorage(currentTimeSlot,currentTextarea); // saves to the storage if the user presses the save button
+    };
    });
 
    getFromLocalStorage(timeSlots); // checks for values in local storage and displays them on the page
