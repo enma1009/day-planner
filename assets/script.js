@@ -41,9 +41,10 @@ $(document).ready(function() {
 
   });
 
-$(window).on("load", function() {
+// checks for values in local storage and displays them on the page
+$(window).on("load", function() { 
     var timeSlots = ["09","10","11","12","13","14","15","16","17"];
-    getFromLocalStorage(timeSlots); // checks for values in local storage and displays them on the page
+    getFromLocalStorage(timeSlots); 
 });
 
 function saveToLocalStorage(cts,cta) {
@@ -54,7 +55,6 @@ function saveToLocalStorage(cts,cta) {
 
 function getFromLocalStorage(t) {
     if (localStorage) {
-        console.log(localStorage.length);
         for (var i = 0; i < t.length; i++) {
             var taskKey = t[i];
             var task = localStorage.getItem(taskKey);
