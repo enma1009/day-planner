@@ -1,30 +1,10 @@
 $(document).ready(function() {
-    
-    var now = moment(); // gets the current date and time
-    var formattedDate = now.format("dddd[,] MMMM Do gggg"); // formats the current date and time
-    var currentHour = now.format("HH"); // gets the hour in 24 hour time
 
-    $("#todaysDate").text(formattedDate);
-    
-    // disables the textarea input for past hours
-    $("textarea").each(function( i ) {
-        var timeSlot = $(this).attr("id"); 
-        if(currentHour > timeSlot) {       
-            $(this).prop('disabled', true);
-        } else if (currentHour == timeSlot) {
-            $(this).addClass("present");
-        } else {
-            $(this).addClass("future");
-        };
+    $("textarea").each(function(i) {
+        $(this).addClass("future");
     });
 
-    // disables the button for past hours
-    $("button").each(function( i ) {
-        var currentBtn = $(this).attr("index"); 
-        if(currentHour > currentBtn) {       
-            $(this).prop('disabled', true);
-        };
-    });
+    checkTime();
 
    // code to store tasks in localStorage
    $("button").on("click", function(event) {
@@ -39,7 +19,38 @@ $(document).ready(function() {
     };
    });
 
-  });
+});
+
+function checkTime() { // checks the time every second to be able to disable the inputs without refreshing the page
+    setInterval( function() {
+        var now = moment(); // gets the current date and time
+        var formattedDate = now.format("dddd[,] MMMM Do gggg"); // formats the current date and time
+        var currentHour = now.format("HH"); // gets the hour in 24 hour time
+    
+        $("#todaysDate").text(formattedDate);
+        
+        // disables the textarea input for past hours
+        $("textarea").each(function(i) {
+            var timeSlot = $(this).attr("id"); 
+            if(currentHour > timeSlot) {       
+                $(this).prop('disabled', true);
+            } else if (currentHour == timeSlot) {
+                $(this).removeClass("future");
+                $(this).addClass("present");
+            } else {
+                $(this).addClass("future");
+            };
+        });
+    
+        // disables the button for past hours
+        $("button").each(function( i ) {
+            var currentBtn = $(this).attr("index"); 
+            if(currentHour > currentBtn) {       
+                $(this).prop('disabled', true);
+            };
+        });
+    },1000);
+};
 
 // checks for values in local storage and displays them on the page
 $(window).on("load", function() { 
